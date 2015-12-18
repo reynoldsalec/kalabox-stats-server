@@ -49,7 +49,7 @@ Db.prototype.insert = function(doc) {
   // Save for later.
   var self = this;
 
-  return client.index({
+  return ElasticClient.index({
     index: self.index,
     type: self.type,
     body: doc
@@ -79,7 +79,7 @@ Db.prototype.getAll = function(fn) {
   // Save for later.
   var self = this;
 
-  return self.find('*:*');
+  return ElasticClient.find('*:*');
 
 };
 
@@ -90,7 +90,7 @@ Db.prototype.get = function(id) {
 
   var self = this;
 
-  return self.find({_id: id});
+  return ElasticClient.find({_id: id});
 
 };
 
