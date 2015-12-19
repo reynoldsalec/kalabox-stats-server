@@ -5,7 +5,8 @@ var Promise = require('bluebird');
 var shared = require('./shared.js');
 var VError = require('verror');
 var uuid = require('uuid');
-var Db = require('./mongoAdapter.js');
+//var Db = require('./mongoAdapter.js');
+var Db = require('./elasticAdapter.js');
 var config = require('./config.json');
 
 /*
